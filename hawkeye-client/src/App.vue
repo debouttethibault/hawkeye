@@ -1,17 +1,15 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import Map from './components/Map.vue';
-import ActionMenu from './components/ActionMenu.vue';
-
-const drawerOpen = ref(true);
+import AppBar from './components/AppBarComponent.vue';
+import MyMap from './components/MapComponent.vue';
+import Drawer from './components/DrawerComponent.vue';
 </script>
 
 <template>
   <v-app>
-    <ActionMenu />
-    <v-navigation-drawer color="black-lighten-3" v-model="drawerOpen"> </v-navigation-drawer>
+    <app-bar />
+    <drawer />
     <v-main>
-      <Map />
+      <my-map />
     </v-main>
   </v-app>
 </template>
