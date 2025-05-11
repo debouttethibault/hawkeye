@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35506.116
@@ -10,10 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hawkeye.Central.Data", "Hawkeye.Central.Data\Hawkeye.Central.Data.csproj", "{2FF9A222-1B59-43D2-8BEF-229248B754C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{C7AF873D-11AD-4C29-ABD4-3F49BAA27C04}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hawkeye.Central.Common.ServiceResult", "Hawkeye.Central.Common.ServiceResult\Hawkeye.Central.Common.ServiceResult.csproj", "{36DA1059-DF3A-4164-B0B6-C25E4B1E807F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hawkeye.Central.Common.ServiceResult.AspNetCore", "Hawkeye.Central.Common.ServiceResult.AspNetCore\Hawkeye.Central.Common.ServiceResult.AspNetCore.csproj", "{5BB3081A-654E-4AEE-9F74-CE06A6DC5E17}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hawkeye.Central.Services.Models", "Hawkeye.Central.Services.Models\Hawkeye.Central.Services.Models.csproj", "{4E014B23-25EC-4065-8396-8FB830621B9A}"
 EndProject
@@ -35,14 +31,6 @@ Global
 		{2FF9A222-1B59-43D2-8BEF-229248B754C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FF9A222-1B59-43D2-8BEF-229248B754C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FF9A222-1B59-43D2-8BEF-229248B754C5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36DA1059-DF3A-4164-B0B6-C25E4B1E807F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36DA1059-DF3A-4164-B0B6-C25E4B1E807F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36DA1059-DF3A-4164-B0B6-C25E4B1E807F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36DA1059-DF3A-4164-B0B6-C25E4B1E807F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5BB3081A-654E-4AEE-9F74-CE06A6DC5E17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5BB3081A-654E-4AEE-9F74-CE06A6DC5E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5BB3081A-654E-4AEE-9F74-CE06A6DC5E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5BB3081A-654E-4AEE-9F74-CE06A6DC5E17}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4E014B23-25EC-4065-8396-8FB830621B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4E014B23-25EC-4065-8396-8FB830621B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E014B23-25EC-4065-8396-8FB830621B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
