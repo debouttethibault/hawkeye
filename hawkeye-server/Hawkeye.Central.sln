@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35506.116
@@ -12,6 +12,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{C7AF873D-11AD-4C29-ABD4-3F49BAA27C04}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hawkeye.Central.Services.Models", "Hawkeye.Central.Services.Models\Hawkeye.Central.Services.Models.csproj", "{4E014B23-25EC-4065-8396-8FB830621B9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{26DA945B-153E-4B47-BCF6-7E6936044799}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hawkeye.Central.Services", "Hawkeye.Central.Services\Hawkeye.Central.Services.csproj", "{0DC689DD-43A1-4EBE-BFE3-211C42201B28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{0E57B731-B707-4555-AB36-AF9DEB2BE972}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +41,10 @@ Global
 		{4E014B23-25EC-4065-8396-8FB830621B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E014B23-25EC-4065-8396-8FB830621B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E014B23-25EC-4065-8396-8FB830621B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DC689DD-43A1-4EBE-BFE3-211C42201B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DC689DD-43A1-4EBE-BFE3-211C42201B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DC689DD-43A1-4EBE-BFE3-211C42201B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DC689DD-43A1-4EBE-BFE3-211C42201B28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,5 +52,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{69809788-1A35-40B8-8EF8-4BB5CD43F543} = {C7AF873D-11AD-4C29-ABD4-3F49BAA27C04}
 		{2FF9A222-1B59-43D2-8BEF-229248B754C5} = {C7AF873D-11AD-4C29-ABD4-3F49BAA27C04}
+		{4E014B23-25EC-4065-8396-8FB830621B9A} = {26DA945B-153E-4B47-BCF6-7E6936044799}
+		{0DC689DD-43A1-4EBE-BFE3-211C42201B28} = {26DA945B-153E-4B47-BCF6-7E6936044799}
 	EndGlobalSection
 EndGlobal

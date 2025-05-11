@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="MQTTnet" Version="5.0.1.1416" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.3" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
     <PackageReference Include="TDeboutte.Common.ServiceResult" Version="0.1.0" />
     <PackageReference Include="TDeboutte.Common.ServiceResult.AspNetCore" Version="0.1.0" />
   </ItemGroup>
@@ -16,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Hawkeye.Central.Data\Hawkeye.Central.Data.csproj" />
     <ProjectReference Include="..\Hawkeye.Central.Services.Models\Hawkeye.Central.Services.Models.csproj" />
+    <ProjectReference Include="..\Hawkeye.Central.Services\Hawkeye.Central.Services.csproj" />
   </ItemGroup>
 
 </Project>

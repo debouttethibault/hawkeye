@@ -47,9 +47,7 @@ namespace Hawkeye.Central.Api.MQTT
 
             _mqtt = mqttClientFactory.CreateMqttClient();
             _mqtt.ApplicationMessageReceivedAsync += MessageReceivedAsync;
-
-
-
+            
             _pendingRequestQueue = new ConcurrentDictionary<string, TaskCompletionSource<JsonElement>>();
         }
 

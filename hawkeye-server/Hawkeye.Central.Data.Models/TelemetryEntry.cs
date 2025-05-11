@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace Hawkeye.Central.Data.Models;
 
-public class Telemetry
+public class TelemetryEntry
 {
     public Guid? UavId { get; set; }
     public virtual Uav? Uav { get; set; }

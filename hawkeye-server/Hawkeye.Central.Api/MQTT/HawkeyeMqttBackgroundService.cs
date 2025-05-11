@@ -8,18 +8,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Hawkeye.Central.Api.MQTT
 {
-    public class HawkeyeMqttBackgroundService(ILogger<HawkeyeMqttBackgroundService> _logger, IServiceProvider _serviceProvider, HawkeyeMqttService _mqttService, IHubContext<HawkeyeHub> _hubContext) : BackgroundService
+    public class HawkeyeMqttBackgroundService(ILogger<HawkeyeMqttBackgroundService> logger, IServiceProvider serviceProvider, HawkeyeMqttService mqttService, IHubContext<HawkeyeHub> hubContext) : BackgroundService
     {
         private readonly SemaphoreSlim _messageAvailable = new SemaphoreSlim(1);
         private readonly ConcurrentQueue<UavTelemetryMessage> _messageQueue = new ConcurrentQueue<UavTelemetryMessage>();
 
         protected override async Task ExecuteAsync(CancellationToken ct)
         {
-            using var scope = _serviceProvider.CreateScope();
-            using var db = scope.ServiceProvider.GetRequiredService<HawkeyeDbContext>();
+            using var scope = serviceProvider.CreateScope();
+            await using var db = scope.ServiceProvider.GetRequiredService<HawkeyeDbContext>();
 
-            _mqttService.TelemetryMessageReceived += MqttTelemetryMessageReceived;
-            await _mqttService.ConnectAsync(ct);
+            mqttService.TelemetryMessageReceived += MqttTelemetryMessageReceived;
+            await mqttService.ConnectAsync(ct);
 
             while (!ct.IsCancellationRequested)
             {
@@ -29,9 +29,9 @@ namespace Hawkeye.Central.Api.MQTT
                     continue;
                 }
 
-                await _hubContext.Clients.All.SendAsync("telemetry", message, ct);
+                await hubContext.Clients.All.SendAsync("telemetry", message, ct);
 
-                var telemetryEntity = new Telemetry
+                var telemetryEntity = new TelemetryEntry
                 {
                     UavId = message.UavId,
                     Key = $"uav/{message.UavId}",
@@ -47,12 +47,12 @@ namespace Hawkeye.Central.Api.MQTT
                 }
                 catch (DbUpdateException)
                 {
-                    _logger.LogCritical("Failed saving telemetry entity");
+                    logger.LogCritical("Failed saving telemetry entity");
                 }
             }
 
-            _mqttService.TelemetryMessageReceived -= MqttTelemetryMessageReceived;
-            await _mqttService.DisconnectAsync(ct);
+            mqttService.TelemetryMessageReceived -= MqttTelemetryMessageReceived;
+            await mqttService.DisconnectAsync(ct);
         }
 
         private void MqttTelemetryMessageReceived(object? sender, HawkeyeMqttService.UavTelemetryEventArgs args)

@@ -7,5 +7,6 @@ namespace Hawkeye.Central.Data
     {
         public DbSet<Uav> Uavs { get; set; } = null!;
         public DbSet<Mission> Missions { get; set; } = null!;
+        public DbSet<TelemetryEntry> TelemetryEntries { get; set; } = null!;
     }
 }

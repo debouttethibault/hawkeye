@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Hawkeye.Central.Data\Hawkeye.Central.Data.csproj" />
+      <ProjectReference Include="..\Hawkeye.Central.Services.Models\Hawkeye.Central.Services.Models.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="TDeboutte.Common.ServiceResult" Version="0.1.0" />
+    </ItemGroup>
+
+</Project>
